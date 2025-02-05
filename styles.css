@@ -1,0 +1,500 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fafafa;
+    color: #333;
+}
+
+/* Hero Section Styling */
+.hero {
+    background-color: white;
+    color: #333;
+    text-align: center;
+    padding: 60px 20px;
+    position: relative;
+}
+
+.hero .logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 150px;
+    height: auto;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+}
+
+.hero h1:hover {
+    color: #47a84f;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    transition: color 0.3s ease;
+}
+
+.hero p:hover {
+    color: #47a84f;
+}
+
+.hero .btn {
+    padding: 10px 20px;
+    background-color: #47a84f;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.hero .btn:hover {
+    background-color: #3d8f42;
+}
+
+/* Sections Styling */
+.sections {
+    display: flex;
+    justify-content: space-around;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin: 40px 20px;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    position: relative;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 250px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.card h2 {
+    font-size: 1.8rem;
+    color: #47a84f;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #777;
+}
+
+/* Hover Image Effect */
+.card img.hover-img {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+.card:hover .hover-img {
+    top: -60px;
+    opacity: 1;
+    width: 120px;
+    height: 120px;
+}
+
+/* About Section Styling */
+#apropos .sections {
+    text-align: center;
+    margin-top: 50px;
+}
+
+#apropos .card {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    box-shadow: none;
+    padding: 40px;
+}
+
+#apropos h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+/* Form Styling */
+.form-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #47a84f;
+}
+
+.form-group textarea {
+    resize: vertical;
+    height: 120px;
+}
+
+.submit-btn {
+    background-color: #62b14e;
+    color: white;
+    font-weight: bold;
+    padding: 12px 20px;
+    border-radius: 8px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+.submit-btn:hover {
+    background-color: #47a84f;
+}
+
+/* Join Us Section */
+.join-us-section {
+    background-color: #62b14e;
+    color: white;
+    padding: 40px;
+    text-align: center;
+}
+
+.join-us-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.join-us-section p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.join-us-section .join-btn {
+    background-color: #47a84f;
+    color: white;
+    font-weight: bold;
+    padding: 12px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.join-us-section .join-btn:hover {
+    background-color: #3d8f42;
+}
+
+/* Footer Styling */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f4f4f9;
+    color: #555;
+    margin-top: 40px;
+}
+
+/* How It Works Section */
+.how-it-works-section {
+    background-color: #f4f4f9;
+    padding: 60px 20px;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1s ease, visibility 1s ease;
+}
+
+.how-it-works-section.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+.how-it-works-section .content h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.how-it-works-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.how-it-works-list li::before {
+    content: counter(item) ". ";
+    counter-increment: item;
+    color: #62b14e;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.how-it-works-list {
+    counter-reset: item;
+}
+
+.how-it-works-item {
+    font-size: 1.2rem;
+    margin: 15px 0;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.how-it-works-item.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.how-it-works-section .content .btn {
+    background-color: #62b14e;
+    color: white;
+    font-weight: bold;
+    padding: 12px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.how-it-works-section .content .btn:hover {
+    background-color: #47a84f;
+}
+
+/* Floating message styles */
+#floating-message {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4CAF50; /* Green background for confirmation */
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    display: none; /* Hidden by default */
+    z-index: 999;
+}
+
+#floating-content {
+    font-size: 16px;
+    text-align: center;
+}
+
+.thank-you-section {
+    margin: 20px auto;
+    text-align: center;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    width: 80%; /* Adjust width for smaller screens */
+    max-width: 500px; /* Limit the maximum width */
+}
+
+.thank-you-message {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Media Queries */
+
+/* For screens smaller than 1024px (Tablets and smaller screens) */
+@media screen and (max-width: 1024px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .sections {
+        flex-direction: column; /* Stack sections vertically */
+        justify-content: center;
+    }
+
+    .card {
+        width: 100%; /* Cards should take full width on smaller screens */
+    }
+
+    .form-container {
+        padding: 20px;
+        width: 100%;
+    }
+
+    .submit-btn {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+    .how-it-works-section .content h2 {
+        font-size: 1.5rem;
+    }
+
+    /* Footer styling */
+    .footer {
+        padding: 10px;
+    }
+}
+
+/* For screens smaller than 768px (Mobile devices) */
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 14px; /* Smaller text for mobile */
+    }
+
+    .hero {
+        padding: 40px 20px;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .hero .btn {
+        padding: 8px 16px;
+    }
+
+    .sections {
+        flex-direction: column; /* Stack sections vertically on mobile */
+        gap: 20px;
+    }
+
+    .card {
+        width: 100%; /* Full width for cards */
+        margin-bottom: 15px;
+    }
+
+    .form-container {
+        padding: 15px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        font-size: 14px;
+    }
+
+    .submit-btn {
+        font-size: 1rem;
+    }
+
+    /* Adjust images */
+    .card img {
+        max-width: 100%; /* Ensure images are responsive */
+    }
+
+    /* Footer */
+    .footer {
+        font-size: 0.9rem;
+    }
+}
+
+/* For screens smaller than 480px (Very small screens) */
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 12px; /* Even smaller text for tiny screens */
+    }
+
+    .hero {
+        padding: 30px 20px;
+    }
+
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .sections {
+        flex-direction: column; /* Stack sections vertically on smaller screens */
+        gap: 15px;
+    }
+
+    .card {
+        width: 100%; /* Full width cards */
+        margin-bottom: 10px;
+    }
+
+    .form-container {
+        padding: 10px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        font-size: 13px;
+    }
+
+    .submit-btn {
+        font-size: 1rem;
+        padding: 10px 15px;
+    }
+
+    /* Adjust footer */
+    .footer {
+        padding: 10px;
+        font-size: 0.8rem;
+    }
+
+    /* Hide larger elements like hero images or make them smaller */
+    .hero .logo {
+        width: 100px;
+    }
+
+    /* Adjust Join Us button */
+    .join-us-section .join-btn {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}

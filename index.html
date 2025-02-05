@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoZen - Accueil</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header class="hero">
+        <div class="header-content">
+            <img src="logo.png" alt="EcoZen Logo" class="logo">
+            <h1>Bienvenue sur <span class="highlight">EcoZen</span></h1>
+            <p>Un projet de jardins thérapeutiques sur les toits des universités</p>
+            <a href="#apropos" class="btn">Découvrir</a>
+        </div>
+    </header>
+    
+
+    <section id="apropos" class="sections">
+        <div class="card">
+            <h2>Notre Mission</h2>
+            <p>EcoZen s'engage à promouvoir la nature en ville, en offrant aux étudiants des espaces verts sur les toits des universités, pour lutter contre l'anxiété et le stress.</p>
+        </div>
+    </section>
+
+    <section id="explore" class="sections">
+        <div class="card" id="therapeutic-garden-card">
+            <h2>Jardin thérapeutique</h2>
+            <p>Des espaces verts créés pour offrir aux étudiants un refuge de détente, contribuant à réduire l’anxiété et le stress.</p>
+            <img class="hover-img" src="detente.jpg" alt="Jardin thérapeutique" />
+        </div>
+        <div class="card" id="grow-to-soothe-card">
+            <h2>Cultiver pour apaiser</h2>
+            <p>Cultivez des plantes médicinales et des légumes, tout en vous reconnectant à la nature. Un projet pour calmer les esprits et nourrir le corps.</p>
+            <img class="hover-img" src="medic.jpg" alt="Cultiver pour apaiser" />
+        </div>
+        <div class="card" id="relaxation-space-card">
+            <h2>Détente et bien-être</h2>
+            <p>Des bancs et des espaces aménagés pour permettre aux étudiants de se ressourcer, entre les cours, dans un cadre agréable et paisible.</p>
+            <img class="hover-img" src="relaxR.jpg" alt="Détente et bien-être" />
+        </div>
+    </section>
+
+
+    <section id="how-it-works" class="how-it-works-section">
+        <div class="content">
+            <h2>Comment ça marche ?</h2>
+            <ul class="how-it-works-list">
+                <li class="how-it-works-item">Création de jardins thérapeutiques pour aider à réduire l'anxiété et le stress des étudiants.</li>
+                <li class="how-it-works-item">Utilisation des toits d'universités pour aménager de grands espaces verts et végétaliser les villes.</li>
+                <li class="how-it-works-item">Les étudiants peuvent cultiver des plantes médicinales et des légumes bénéfiques pour leur bien-être.</li>
+                <li class="how-it-works-item">Des espaces de détente avec des bancs permettent aux étudiants de se reposer et se ressourcer entre les cours.</li>
+                <li class="how-it-works-item">Rejoindre facilement le projet grâce à des sessions collectives de jardinage organisées régulièrement.</li>
+            </ul>
+            <a href="#form" class="btn join-btn">Inscrivez-vous !</a>
+        </div>
+    </section>
+    
+    
+    <div id="form" class="form-container">
+        <h3>Formulaire d'inscription</h3>
+        <form id="join-form">
+            <div class="form-group">
+                <label for="name">Nom et Prénom</label>
+                <input type="text" id="name" name="name" required placeholder="Votre nom">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required placeholder="Votre email">
+            </div>
+            <div class="form-group">
+                <label for="site">Site universitaire</label>
+                <select id="site" name="site">
+                    <option value="Chenes">Site des Chênes</option>
+                    <option value="Saint Martin">Site Saint Martin</option>
+                    <option value="Neuville">Site Neuville</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="time">Choisir l'heure</label>
+                <select id="time" name="time" required>
+                    <option value="9-11">9h - 11h</option>
+                    <option value="12-14">12h - 14h</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="year">Année d'études</label>
+                <select id="year" name="year" required>
+                    <option value="L1">L1</option>
+                    <option value="L2">L2</option>
+                    <option value="L3">L3</option>
+                    <option value="M1">M1</option>
+                    <option value="M2">M2</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="ideas">Vos idées</label>
+                <textarea id="ideas" name="ideas" placeholder="Partagez vos idées ici..."></textarea>
+            </div>
+            <button type="submit" class="btn submit-btn">S'inscrire</button>
+        </form>
+        <p id="confirmation-message" class="confirmation-message"></p>
+    </div>
+    
+    <div id="floating-message" style="display: none;">
+        <div id="floating-content"></div>
+    </div>
+
+    <div id="thank-you-section" class="thank-you-section" style="display: none;">
+        <h3>Merci pour votre inscription !</h3>
+        <p>Nous avons bien reçu votre inscription et vous serez notifié des prochaines sessions de jardinage.</p>
+    </div>
+    
+    
+    
+    <footer class="footer">
+        <p>&copy; 2025 EcoZen - Tous droits réservés</p>
+    </footer>
+</body>
+</html>
